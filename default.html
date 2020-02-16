@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="default2.html">Mortgage Calculator</a></li>
+        <li><a href="default3.html">Tip Calculator</a></li>
+      </ul>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title"></h1>
+        <p class="subtitle">
+          Calculate your Loans using <strong>Simple Loan Calculator</strong>
+        </p>
+      </div>
+
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <div class="card">
+            <div class="card-content">
+              <form id="loan-form">
+                <div class="level">
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">1</p>
+                      Loan Amount
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input
+                            class="input"
+                            id="amount"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                          />
+                          <span class="icon is-small is-right">
+                            <i class="fa fa-dollar-sign"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">2</p>
+                      Interest Rate
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input
+                            class="input"
+                            id="interest"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                          />
+                          <span class="icon is-small is-right">
+                            <i class="fa fa-percentage"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">3</p>
+                      Number of Years
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input"
+                            id="years"
+                            type="number"
+                            min="0"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="fa fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="control">
+                  <button
+                    class="button is-large is-fullwidth is-primary is-outlined"
+                  >
+                    Calculate
+                  </button>
+                </div>
+              </form>
+              <div class="control">
+                <button
+                  class="button is-large is-fullwidth is-primary is-outlined"
+                  onclick="myButton()"
+                >
+                  Reset
+                </button>
+                <script>
+                  function myButton() {
+                    location.reload();
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Results Loan-->
+    <section class="section">
+      <h1 class="title">Your Results</h1>
+
+      <div class="columns is-multiline">
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-primary has-text">
+            <p id="monthlyPayment" class="title is-1">$</p>
+            <p class="subtitle is-4">Monthly Payments</p>
+          </div>
+        </div>
+
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-info has-text">
+            <p id="totalInterest" class="title is-1">%</p>
+            <p class="subtitle is-4">Total Interest</p>
+          </div>
+        </div>
+
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-link has-text">
+            <p id="totalPayment" class="title is-1">$</p>
+            <p class="subtitle is-4">Total Amount</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
+</html>

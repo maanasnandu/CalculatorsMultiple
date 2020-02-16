@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="default.html">Loan Calculator</a></li>
+        <li><a href="default2.html">Mortgage Calculator</a></li>
+      </ul>
+    </nav>
+    <!--Mortgage Calculator-->
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title"></h1>
+        <p class="subtitle">
+          Calculate Tip using
+          <strong>Simple Tip Calculator</strong>
+        </p>
+      </div>
+
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <div class="card">
+            <div class="card-content">
+              <form id="form">
+                <div class="level">
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">1</p>
+                      How much was your bill?
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input
+                            class="input"
+                            id="TipAmount"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                          />
+                          <span class="icon is-small is-right">
+                            <i class="fa fa-dollar-sign"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">2</p>
+                      Please select your tip percentage
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <p id="quiz" value="quiz">
+                          <input
+                            id="serviceTip"
+                            type="radio"
+                            value="12"
+                            name="tipVal"
+                          />12
+                          <br />
+                          <input
+                            id="serviceTip"
+                            type="radio"
+                            value="15"
+                            name="tipVal"
+                          />15
+                          <br />
+                          <input
+                            id="serviceTip"
+                            type="radio"
+                            value="18"
+                            name="tipVal"
+                          />18
+                          <br />
+                          <input
+                            id="serviceTip"
+                            type="radio"
+                            value="20"
+                            name="tipVal"
+                          />20
+                          <br />
+                          <input
+                            id="serviceTip"
+                            type="radio"
+                            name="tipVal"
+                            value="none"
+                          />none <br />
+
+                          <input
+                            id="serviceTip"
+                            type="radio"
+                            name="tipVal"
+                            value="custom"
+                          />custom <br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Custom tip-->
+                <div class="level">
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">3</p>
+                      Custom tips percentage
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input
+                            class="input"
+                            id="customTip"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                          />
+                          <span class="icon is-small is-right">
+                            <i class="fa fa-dollar-sign"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Rating-->
+
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">4</p>
+                      Please rate our service
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <select id="service">
+                          <option value="Excellent">Excellent</option>
+                          <option value="Good">Good</option>
+                          <option value="Average">Average</option>
+                          <option value="Bad">Bad</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="level">
+                  <!--Left side-->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">5</p>
+                      How many people are sharing the bill?
+                    </div>
+                  </div>
+                  <!--Right-->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input
+                            class="input"
+                            id="NumPeople"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                          />
+                          <span class="icon is-small is-right">
+                            <i class="fa fa-user-friends"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="control">
+                  <button
+                    class="button is-large is-fullwidth is-primary is-outlined"
+                    id="btnCalculate"
+                  >
+                    Calculate
+                  </button>
+                </div>
+              </form>
+              <div class="control">
+                <button
+                  class="button is-large is-fullwidth is-info is-outlined"
+                  onclick="myButton()"
+                >
+                  Reset
+                </button>
+                <script>
+                  function myButton() {
+                    location.reload();
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Results Tips-->
+    <section class="section">
+      <h1 class="title">Your Tips and Total</h1>
+
+      <div class="columns is-multiline">
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-primary has-text">
+            <p id="outTip" class="title is-1">$</p>
+            <p class="subtitle is-4">The Tip Amount For Each Person is</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-multiline">
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-link has-text">
+            <p id="outTotal" class="title is-1">$</p>
+            <p class="subtitle is-4">Your Total Bill (including Tip) is</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-multiline">
+        <div class="coulumn is-12-tablet is-6-desktop is-3-widescreen">
+          <div class="notification is-info has-text">
+            <p id="outFeedback" class="title is-1">
+              <i class="fas fa-comment-dots"></i>
+            </p>
+            <p class="subtitle is-4">Your Feedback is</p>
+
+            <i id="ic1" class="fal fa-grin-hearts fa-lg"></i>
+
+            <i id="ic2" class="far fa-smile-beam"></i>
+
+            <i id="ic3" class="far fa-flushed"></i>
+            <i id="ic4" class="far fa-frown"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="app3.js"></script>
+</html>

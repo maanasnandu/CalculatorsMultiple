@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Simple Loan Calculator</title>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script type="text/javascript">
+      function validate() {
+        var username = document.getElementById("uname");
+        var Password = document.getElementById("pass");
+
+        if (username.value.trim() == "" || Password.value.trim() == "") {
+          alert("please give valid credentials!");
+          return false;
+        } else if (Password.length < 6) {
+          alert("password must be atleast 6 characters long");
+          return false;
+        } else {
+          true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="./undraw_Savings_dwkw.svg" alt="avatar" />
+      </div>
+
+      <div class="login-container">
+        <form onsubmit="return validate()" action="default.html">
+          <img class="avatar" src="undraw_profile_pic_ic5t.svg" alt="avatar" />
+          <h2>Welcome</h2>
+          <div class="input-div one focus">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h5>Username</h5>
+              <input class="input" type="text" id="uname" />
+            </div>
+          </div>
+
+          <div class="input-div two">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div>
+              <h5>Password</h5>
+              <input class="input" type="text" id="pass" />
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
