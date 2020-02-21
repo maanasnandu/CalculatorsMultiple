@@ -21,25 +21,25 @@ function computeTip(e) {
 
   if (serviceTip == 12) {
     var twelvePercentOfBill = billAmount * 0.12;
-    var tipTotal = twelvePercentOfBill / 2 + twelvePercentOfBill;
+    var tipTotal = twelvePercentOfBill * 1;
     var perPerson = tipTotal / numOfPeople;
     var tipPerPerson = perPerson.toFixed(2);
     document.getElementById("customTip").style.display = "none";
   } else if (serviceTip == 15) {
     var fifteenPercentOfBill = billAmount * 0.15;
-    var tipTotal = fifteenPercentOfBill / 2 + fifteenPercentOfBill;
+    var tipTotal = fifteenPercentOfBill * 1;
     var perPerson = tipTotal / numOfPeople;
     var tipPerPerson = perPerson.toFixed(2);
     document.getElementById("customTip").style.display = "none";
   } else if (serviceTip == 18) {
     var eighteenPercentOfBill = billAmount * 0.18;
-    var tipTotal = eighteenPercentOfBill / 2 + eighteenPercentOfBill;
+    var tipTotal = eighteenPercentOfBill * 1;
     var perPerson = tipTotal / numOfPeople;
     var tipPerPerson = perPerson.toFixed(2);
     document.getElementById("customTip").style.display = "none";
   } else if (serviceTip == 20) {
     var twentyPercentOfBill = billAmount * 0.2;
-    var tipTotal = twentyPercentOfBill / 2 + twentyPercentOfBill;
+    var tipTotal = twentyPercentOfBill * 1;
     var perPerson = tipTotal / numOfPeople;
     var tipPerPerson = perPerson.toFixed(2);
     document.getElementById("customTip").style.display = "none";
