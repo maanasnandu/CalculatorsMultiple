@@ -60,7 +60,7 @@ function computeTip(e) {
     var customDeci = customTip / 100;
     var customPerc = billAmount * customDeci;
 
-    var tipTotal = customPerc / 2 + customPerc;
+    var tipTotal = customPerc * 1;
     var perPerson = tipTotal / numOfPeople;
     var tipPerPerson = perPerson.toFixed(2);
   }

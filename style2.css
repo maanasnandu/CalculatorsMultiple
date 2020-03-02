@@ -32,3 +32,27 @@ ul li a {
 ul li a:hover {
   color: red;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 8ch auto;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#serviceTip {
+  opacity: 0.3;
+}
+
+#serviceTip:checked + .label1 {
+  background: crimson;
+  color: #fff;
+}
